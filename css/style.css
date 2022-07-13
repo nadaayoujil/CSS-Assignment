@@ -109,8 +109,6 @@ body {
 
 .txt-center {
     text-align: center;
-    font-size: 33px;
-
 }
 
 .txt-light {
@@ -160,7 +158,12 @@ a.navbar-brand,.nav-links li a {
     height: auto;
 
 }
-
+p,
+figcaption,
+.nav-links li a,
+.plan-info ul li {
+    font-size: 18px;
+}
 /* Section : Music Fest */
 
 .dj-title {
@@ -186,7 +189,7 @@ a.navbar-brand,.nav-links li a {
 
 }
 
-/* Section : Festival Releases */
+/* Information section */
 
 #info-box {
     min-height: 550px;
@@ -202,18 +205,22 @@ a.navbar-brand,.nav-links li a {
 
 .images-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;  
     margin-bottom: 50px;
+
 }
 
 .info-img {
-    width: 220px;
+    width: 200px;
     min-height: auto;
     border-radius: 15px;
     margin-bottom: 10px;
-    border: 4px solid #3882F6;
+    border: 5px solid #3882F6;
 }
+
+
+
 
 /* Section : Quote */
 
