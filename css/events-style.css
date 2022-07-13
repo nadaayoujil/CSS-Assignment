@@ -1,0 +1,177 @@
+:root {
+    --text-color: #333;
+    --text-color-secondary: #767676;
+    --text-color-link: #005A9E;
+  
+    --border-color: #ccc;
+    --border-color-selected: #007AFF;
+  
+    --button-background-color: #eee;
+    --button-text-color: #333;
+    --button-background-color-hover: #f7f7f7;
+    --button-text-color-hover: #222;
+    --button-background-color-active: white;
+    --button-text-color-active: #007AFF;
+    --button-background-color-disabled: #eee;
+    --button-text-color-disabled: #888;
+    --button-background-color-selected: #007AFF;
+    --button-text-color-selected: white;
+  
+    --font-size-largest: 5em;
+    --font-size-larger: 2.618em;
+    --font-size-large: 1.618em;
+    --font-size: 1em; /* 16px */
+    --font-size-small: .85em;
+    --font-size-smaller: .382em;
+    --font-size-smallest: .236em;
+  
+    --space-smaller: .25em;
+    --space-small: .5em;
+    --space: 1em;
+    --space-large: 1.25em;
+    --space-larger: 2em;
+  }
+  
+  body {
+    font-family: "Colfax", -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+    color: var(--text-color);
+    font-size: 16px;
+  }
+  
+  a {
+    color: var(--text-color-link);
+  }
+  
+  /* container */
+  .container {
+    padding: 50px;
+    max-width: 1450px;
+  }
+  
+  /* card component */
+  .card {
+    display: inline-block;
+    margin: 45px;
+    padding: 40px 50px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .card--selected {
+    border-color: var(--border-color-selected);
+    box-shadow: 0 5px 20px rgba(0,0,0,.1)
+  }
+  
+  /* card component blocks */
+  
+  .card__title {
+    font-weight: 300;
+    font-size: var(--font-size-large);
+    margin-bottom: var(--space-small);
+  }
+  
+  .card__price {
+    font-weight: 500;
+    font-size: var(--font-size-largest);
+    position: relative;
+    letter-spacing: -.02em;
+  }
+  
+  .card__price:before {
+    content: "$";
+    position: absolute;
+    font-size: var(--font-size-smallest);
+    font-weight: 400;
+    left: -15px;
+    top: 10px;
+    color: var(--text-color-secondary);
+  }
+  
+  .card__sub-title {
+    text-transform: lowercase;
+    font-size: var(--font-size-small);
+    color: var(--text-color-secondary);
+    margin-bottom: var(--space-larger);
+  }
+  
+  .card__description {
+    line-height: 1.25em;
+    margin-bottom: var(--space-larger);
+  }
+  
+  .card__list {
+    list-style-type: none;
+    margin-bottom: var(--space-larger);
+    padding: 0;
+  }
+  
+  .card__list__item {
+    margin: 15px 0;
+  }
+  
+  .card__button {
+    display: block;
+    position: relative;
+    background: var(--button-background-color);
+    color: var(--button-text-color);
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 1px rgba(0,0,0,.3)
+  }
+  
+  .card__button:hover {
+    background: var(--button-background-color-hover);
+    color: var(--button-text-color-hover);
+    border: 1px solid #ddd;
+    transition: all .1s ease-in-out;
+  }
+  
+  .card__button:active,
+  .card__button:focus {
+    top: 1px;
+    background: var(--button-background-color-active);
+    color: var(--button-text-color-active);
+    box-shadow: 0 0px 0px rgba(0,0,0,0), inset 0 1px 10px rgba(0,0,0,.08);
+  }
+  
+  .card__button--selected, 
+  .card__button--selected:hover,
+  .card__button--selected:active,
+  .card__button--selected:focus {
+    top: 0;
+    background: var(--button-background-color-selected);
+    color: var(--button-text-color-selected);
+    box-shadow: none;
+    border: 1px solid transparent;
+  }
+  
+  .card__button--disabled, 
+  .card__button--disabled:hover,
+  .card__button--disabled:active,
+  .card__button--disabled:focus {
+    top: 0;
+    background: var(--button-background-color-disabled);
+    color: var(--button-text-color-disabled);
+    box-shadow: none;
+    border: 1px solid transparent;
+    cursor: not-allowed;
+  }
+  
+  .card__button__icon {
+    margin-right: var(--space-smaller);  
+  }
+  
+  .card__button__label {
+    font-weight: 500;
+    font-size: 17px;
+  }
+  
+  /* pricing plan card  */
+  .card--plan {
+    width: 280px;
+  }
+  
